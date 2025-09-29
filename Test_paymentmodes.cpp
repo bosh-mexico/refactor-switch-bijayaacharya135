@@ -1,6 +1,7 @@
 #include "PaymentModes.h"
 #include <cassert>
 #include <iostream>
+#include <string>
 
 // Simple test function for checkout
 void test_checkout() {
