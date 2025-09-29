@@ -1,5 +1,6 @@
 #include "PaymentModes.h"
 #include <map>
+#include <string>
 
 // Refactored: Use a map for payment messages and logic
 std::string checkout(PaymentMode mode, double amount) {
