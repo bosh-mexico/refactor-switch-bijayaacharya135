@@ -1,7 +1,7 @@
 #pragma once
 #include "IPaymentProcessor.h"
 #include "PaymentRegistry.h"
-#include "PaymentMode.h"
+#include "PaymentModes.h"
 #include <iostream>
 #include <string>
 
