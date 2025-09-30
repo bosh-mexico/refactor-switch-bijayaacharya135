@@ -8,4 +8,3 @@ enum class PaymentMode {
     CreditCard,
     Unknown
 };
-std::string checkout(PaymentMode mode, double amount);
