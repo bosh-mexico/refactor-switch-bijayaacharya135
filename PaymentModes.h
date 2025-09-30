@@ -8,6 +8,3 @@ enum class PaymentMode {
     CreditCard,
     Unknown
 };
-
-// Processes payment and returns a confirmation message
-std::string checkout(PaymentMode mode, double amount);
