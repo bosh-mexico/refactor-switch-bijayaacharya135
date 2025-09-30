@@ -1,7 +1,8 @@
 #include "checkout.h"
-#include "PaymentMode.h"
+#include "PaymentModes.h"
 #include "PaymentRegistry.h"
 #include "PaymentProcessors.h"
+
 #include <memory>
 #include <iostream>
 #include <string>
