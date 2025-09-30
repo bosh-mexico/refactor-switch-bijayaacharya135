@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-// Helper for test: get the message instead of printing
+// Helper for test
 std::string get_payment_message(PaymentMode mode, double amount) {
     const IPaymentProcessor* processor = PaymentRegistry::instance().getProcessor(mode);
     if (processor) {
