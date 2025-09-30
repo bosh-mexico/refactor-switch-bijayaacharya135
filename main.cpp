@@ -1,13 +1,12 @@
 #include "checkout.h"
-#include "PaymentModes.h"
+#include "PaymentMode.h"
 #include "PaymentRegistry.h"
 #include "PaymentProcessors.h"
-
 #include <memory>
 #include <iostream>
 #include <string>
 
-// Registers all payment processors with the registry (SRP: registration responsibility is separate)
+// Registers all payment processors with the registry
 void registerProcessors() {
     PaymentRegistry::instance().registerProcessor(
         PaymentMode::PayPal, std::make_unique<PayPalProcessor>());
@@ -18,7 +17,7 @@ void registerProcessors() {
 }
 
 int main() {
-    registerProcessors();  // SRP: registration is handled separately
+    registerProcessors();
 
     double amount = 150.75;
     checkout(PaymentMode::PayPal, amount);
