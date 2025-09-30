@@ -28,12 +28,12 @@ void run_payment_tests() {
 
     for (const auto& scenario : scenarios) {
         std::string result = checkout(scenario.mode, scenario.amount);
-        std::cout << "Scenario: " << scenario.description << "\n";
-        std::cout << "  When checkout is called with amount " << scenario.amount << "\n";
-        std::cout << "  Then result should be: " << scenario.expected << "\n";
-        std::cout << "  Actual result: " << result << "\n";
-        std::cout << ((result == scenario.expected) ? "  [PASS]\n" : "  [FAIL]\n");
-        std::cout << std::endl;
+        std::cout << "Scenario: " << scenario.description << "\n"
+          << "  When checkout is called with amount " << scenario.amount << "\n"
+          << "  Then result should be: " << scenario.expected << "\n"
+          << "  Actual result: " << result << "\n"
+          << ((result == scenario.expected) ? "  [PASS]\n" : "  [FAIL]\n")
+          << std::endl;
     }
 }
 
