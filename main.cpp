@@ -6,10 +6,14 @@
 #include <iostream>
 #include <string>
 
+// Registers all payment processors with the registry (SRP: registration responsibility is separate)
 void registerProcessors() {
-    PaymentRegistry::instance().registerProcessor(PaymentMode::PayPal, std::make_unique<PayPalProcessor>());
-    PaymentRegistry::instance().registerProcessor(PaymentMode::GooglePay, std::make_unique<GooglePayProcessor>());
-    PaymentRegistry::instance().registerProcessor(PaymentMode::CreditCard, std::make_unique<CreditCardProcessor>());
+    PaymentRegistry::instance().registerProcessor(
+        PaymentMode::PayPal, std::make_unique<PayPalProcessor>());
+    PaymentRegistry::instance().registerProcessor(
+        PaymentMode::GooglePay, std::make_unique<GooglePayProcessor>());
+    PaymentRegistry::instance().registerProcessor(
+        PaymentMode::CreditCard, std::make_unique<CreditCardProcessor>());
 }
 
 int main() {
