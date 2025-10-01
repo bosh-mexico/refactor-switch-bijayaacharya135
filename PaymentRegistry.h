@@ -4,6 +4,14 @@
 #include <map>
 #include <memory>
 
+void registerProcessors() {
+    PaymentRegistry::instance().registerProcessor(
+        PaymentMode::PayPal, std::make_unique<PayPalProcessor>());
+    PaymentRegistry::instance().registerProcessor(
+        PaymentMode::GooglePay, std::make_unique<GooglePayProcessor>());
+    PaymentRegistry::instance().registerProcessor(
+        PaymentMode::CreditCard, std::make_unique<CreditCardProcessor>());
+}
 class PaymentRegistry {
 public:
     static PaymentRegistry& instance() {
