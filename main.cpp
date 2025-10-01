@@ -1,8 +1,8 @@
-#include "refactor-switch-bijayaacharya135/checkout.h"
-#include "refactor-switch-bijayaacharya135/PaymentModes.h"
-#include "refactor-switch-bijayaacharya135/PaymentRegistry.h"
-#include "refactor-switch-bijayaacharya135/PaymentProcessors.h"
-#include "refactor-switch-bijayaacharya135/PaymentRegistration.h"
+#include "checkout.h"
+#include "PaymentModes.h"
+#include "PaymentRegistry.h"
+#include "PaymentProcessors.h"
+#include "PaymentRegistration.h"
 #include <memory>
 #include <iostream>
 #include <string>
