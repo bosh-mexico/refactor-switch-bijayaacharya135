@@ -2,6 +2,7 @@
 #include "PaymentModes.h"
 #include "PaymentRegistry.h"
 #include "PaymentProcessors.h"
+#include "PaymentRegistration.h"
 #include <memory>
 #include <iostream>
 #include <string>
