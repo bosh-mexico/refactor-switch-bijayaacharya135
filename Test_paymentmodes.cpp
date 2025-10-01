@@ -21,15 +21,6 @@ struct PaymentTestScenario {
     std::string description;
 };
 
-void registerProcessors() {
-    PaymentRegistry::instance().registerProcessor(
-        PaymentMode::PayPal, std::make_unique<PayPalProcessor>());
-    PaymentRegistry::instance().registerProcessor(
-        PaymentMode::GooglePay, std::make_unique<GooglePayProcessor>());
-    PaymentRegistry::instance().registerProcessor(
-        PaymentMode::CreditCard, std::make_unique<CreditCardProcessor>());
-}
-
 void run_payment_tests() {
     std::vector<PaymentTestScenario> scenarios = {
         {PaymentMode::PayPal,     150.75, "Processing PayPal payment of $150.750000", "PayPal payment with valid amount"},
