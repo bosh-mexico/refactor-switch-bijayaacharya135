@@ -16,14 +16,14 @@ enable_testing()
 # Main executable (exclude test files)
 add_executable(bms-main
     main.cpp
-    PaymentProcessors.cpp
+    PaymentModes.cpp
     # ...add other source files as needed
 )
 
 # Test executable (exclude main.cpp)
 add_executable(test-monitor
     Test_paymentmodes.cpp
-    PaymentProcessors.cpp
+    PaymentModes.cpp
 )
 
 target_link_libraries(
