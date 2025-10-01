@@ -24,14 +24,46 @@ struct PaymentTestScenario {
 
 void run_payment_tests() {
     std::vector<PaymentTestScenario> scenarios = {
-        {PaymentMode::PayPal,     150.75, "Processing PayPal payment of $150.750000", "PayPal payment with valid amount"},
-        {PaymentMode::GooglePay,  99.99,  "Processing GooglePay payment of $99.990000", "GooglePay payment with valid amount"},
-        {PaymentMode::CreditCard, 0.0,    "Processing Credit Card payment of $0.000000", "CreditCard payment with zero amount"},
-        {PaymentMode::PayPal,     -10.0,  "Processing PayPal payment of $-10.000000", "PayPal payment with negative amount"},
-        {PaymentMode::GooglePay,  1e6,    "Processing GooglePay payment of $1000000.000000", "GooglePay payment with large amount"},
-        {PaymentMode::Unknown,    150.75, "Invalid payment mode selected!", "Unknown payment mode"},
-        {PaymentMode::Unknown,    0.0,    "Invalid payment mode selected!", "Unknown payment mode with zero amount"},
-        {PaymentMode::Unknown,    -5.0,   "Invalid payment mode selected!", "Unknown payment mode with negative amount"}
+                {
+            PaymentMode::PayPal, 150.75,
+            "Processing PayPal payment of $150.750000",
+            "PayPal payment with valid amount"
+        },
+        {
+            PaymentMode::GooglePay, 99.99,
+            "Processing GooglePay payment of $99.990000",
+            "GooglePay payment with valid amount"
+        },
+        {
+            PaymentMode::CreditCard, 0.0,
+            "Processing Credit Card payment of $0.000000",
+            "CreditCard payment with zero amount"
+        },
+        {
+            PaymentMode::PayPal, -10.0,
+            "Processing PayPal payment of $-10.000000",
+            "PayPal payment with negative amount"
+        },
+        {
+            PaymentMode::GooglePay, 1e6,
+            "Processing GooglePay payment of $1000000.000000",
+            "GooglePay payment with large amount"
+        },
+        {
+            PaymentMode::Unknown, 150.75,
+            "Invalid payment mode selected!",
+            "Unknown payment mode"
+        },
+        {
+            PaymentMode::Unknown, 0.0,
+            "Invalid payment mode selected!",
+            "Unknown payment mode with zero amount"
+        },
+        {
+            PaymentMode::Unknown, -5.0,
+            "Invalid payment mode selected!",
+            "Unknown payment mode with negative amount"
+        }
     };
 
     for (const auto& scenario : scenarios) {
